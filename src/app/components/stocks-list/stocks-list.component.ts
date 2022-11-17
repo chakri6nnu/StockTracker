@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StocksList } from 'src/app/interfaces';
-import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
+import { StocksList } from '../../interfaces';
+import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 
 @Component({
   selector: 'app-stocks-list',

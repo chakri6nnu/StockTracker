@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service';
-import { StocksList } from 'src/app/interfaces';
+import { AppService } from '../../app.service';
+import { StocksList } from '../../interfaces';
 
 @Component({
   selector: 'app-stock',

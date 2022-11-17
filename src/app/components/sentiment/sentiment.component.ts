@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { InsiderSentiment, StocksList } from 'src/app/interfaces';
-import { FinnhubService } from 'src/app/services/finnhub/finnhub.service';
-import { LoadingService } from 'src/app/services/loading/loading.service';
-import { LocalStorageService } from 'src/app/services/local-storage/local-storage.service';
+import { InsiderSentiment, StocksList } from '../../interfaces';
+import { FinnhubService } from '../../services/finnhub/finnhub.service';
+import { LoadingService } from '../../services/loading/loading.service';
+import { LocalStorageService } from '../../services/local-storage/local-storage.service';
 
 @Component({
   selector: 'app-sentiment',

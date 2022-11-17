@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { StocksList } from 'src/app/interfaces';
+import { StocksList } from '../../interfaces';
 import { LocalStorageRefService } from './local-storage-ref.service';
 
 @Injectable({
