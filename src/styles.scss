@@ -1,0 +1,166 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #d0dae7 !important;
+}
+.up{
+    color: green;
+}
+.down{
+    color: orange;
+}
+.main {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;    
+    h1{
+        font-weight: 700;
+    }
+    h1,  h2,  h3,  h4,  h5,  h6 {
+        color: #3e4555;
+    }
+    .arrow{
+        font-size: 4rem;
+    }
+    .header{
+        background: #ffffff;  
+        background: #ffffff;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow: 0px 0px 10px 0px;
+        margin: 0 10%
+    }
+    .loading{
+        padding: 20px;
+        background: #ffff;
+        color:#000000;
+        border-radius: 10px;
+    }
+    .form-input{
+        border-radius: 50px;
+    }
+    button{
+        cursor: default;
+        background: #dddddd;
+        pointer-events: none;
+    }
+    button:not(:disabled) {
+        pointer-events:unset;
+        background-color: #7367ff;
+        color:#ffffff;
+    }
+    .font-weight-medium {
+        font-weight: 500;
+    }
+    
+    .bg-light {
+        background-color: #f4f8fa !important;
+    }
+    
+    .subtitle {
+        line-height: 24px;
+        font-size: 18px;
+        span{
+            color: #8d97ad;
+            font-size: 16px;
+        }
+    }
+    
+    ul {
+        margin-top: 30px;
+    }
+    
+    h5 {
+        line-height: 22px;
+        font-size: 18px;
+    }
+    
+    ul li a {
+        color: #8d97ad;
+        padding-right: 15px;
+        -webkit-transition: 0.1s ease-in;
+        -o-transition: 0.1s ease-in;
+        transition: 0.1s ease-in;
+    }
+    
+    ul li a:hover {
+        -webkit-transform: translate3d(0px, -5px, 0px);
+        transform: translate3d(0px, -5px, 0px);
+        color: #316ce8;
+    }
+    
+    .title {
+        margin: 30px 0 0 0;
+    }
+    .stocksList{
+        h2{
+            line-height: 0.7;
+        }
+        .box{
+            background: #ffffff; 
+         }
+         .text-right{
+            text-align: right;
+         }
+         .topCard{
+            position: absolute;
+            width: 98%;
+            top: -10px;
+            z-index: 1;
+            left: 20px;
+         }
+         .cardbtns{
+             pointer-events: none;
+         }
+         .setbg{
+             border: 0;
+     
+         }
+         .close{
+             width: 25px;
+             height: 25px
+         }
+         .card{
+            background: #fff !important;
+            padding: 20px 10px;
+           
+            strong{
+                color:#000;
+            }
+            .details{
+                text-align: right;
+                display: block;
+                text-decoration: none;
+            }
+         }
+    }
+   
+}
+.sentiment{
+    strong{
+        color:#000000;
+        font-weight: 500;
+    }
+    .mt100{
+        margin-top: 200px;;
+    }
+    .back{
+        text-align: center;
+        display: block;
+    }
+    .topCard{
+        position: absolute;
+        z-index: 1;
+        top: -23px;
+        width: 60%;
+    }
+    .card{
+        padding-top: 50px;
+    }
+    .sentimentItem{
+        border-right: 1px solid #ddd;
+        margin-bottom: 21px;
+        padding: 18px -8px;
+        margin: 20px 0;
+        margin-top: 20px !important;
+        padding-left: 48px !important;
+    }
+}

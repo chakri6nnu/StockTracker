@@ -1,0 +1,5 @@
+<div  *ngIf="stocksList$ | async as stocksList" class="row justify-content-md-center stocksList">  
+    <div *ngFor="let stock of stocksList$ | async as stocksList; let i = index" class="col-md-6  mb-4">  
+      <app-stock [stock]="stock"></app-stock>
+    </div>
+  </div>

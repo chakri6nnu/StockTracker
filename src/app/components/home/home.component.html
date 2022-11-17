@@ -1,0 +1,9 @@
+<div class="main">
+    <div class="container">
+      <app-header (onSubmit)="onSubmit($event)"></app-header>
+      <app-stocks-list></app-stocks-list>
+        <div  *ngIf="loading$ | async" class="row justify-content-md-center stocksList"> 
+          <div class="col-md-4 loading" >Loading ...</div>
+        </div>
+    </div>
+  </div>

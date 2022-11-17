@@ -1,0 +1,20 @@
+<div class="row justify-content-center mb-4 header">
+    <div class="col-md-7 text-center">
+      <h1 class="mb-3 mt-5 fw-700">STOCK TRACKER</h1>
+      <h4 class="subtitle">
+        Enter the symbol of a stack to track <span>(i.e AAPL, TSLA, GOOGL)</span>
+      </h4>
+      <div class="mb-3 mt-5 row justify-content-md-center">
+        <form class="col-sm-12 col-md-8">
+          <div class="form-group row">
+            <div class="col-sm-8">
+              <input type="text" id="stockInput" class="form-control form-input" name="stockInput" [(ngModel)]="stockInput" />
+            </div>
+            <div class="col-sm-4">
+              <button type="button" id="trackBtn" class="form-control form-input" (click)="submitAction()" [disabled]="stockInput == ''">Track it !</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

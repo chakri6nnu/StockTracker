@@ -1,0 +1,51 @@
+<div class="m-4 position-relative" *ngIf="stock">
+    <!-- Row -->
+    <div class="row topCard">
+      <div class="col-md-2">            
+        <button type="button" class="cardbtns setbg rounded" aria-label="Close">
+          {{stock.stockInfo.symbol}}
+        </button>
+      </div>
+      <div class="col-md-8 text-center">
+        <h2 class="text-truncate">{{stock.stockInfo.description}}</h2>
+      </div>
+      <div class="col-md-2  text-right">
+        <button type="button" (click)="removeItem(stock.stockInfo.symbol)" id="remove{{stock.stockInfo.symbol}}" class="close bg-secondary setbg rounded-circle" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+     <!-- Row -->
+     <div class="card">
+      <div class="row ">
+        <div class="col-md-9 mt-4">
+          <div class="row">
+            <div class="col-md-6">
+              <strong>Change Today:</strong>
+              <p> {{ stock.quote.dp | percent }}</p>
+            </div>
+            <div class="col-md-6">
+              <strong>Opening price:</strong>
+              <p>{{ stock.quote.o | currency:'USD' }}</p>
+            </div>
+            <div class="col-md-6">
+              <strong>Current price:</strong>
+              <p>{{ stock.quote.c | currency:'USD' }}</p>
+            </div>
+            <div class="col-md-6">
+              <strong>High price:</strong>
+              <p>{{ stock.quote.h | currency:'USD' }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3  mt-4">
+          <span class="arrow up" *ngIf="stock.quote.dp >= 0">🡭</span>
+          <span class="arrow down" *ngIf="stock.quote.dp < 0">🡮</span>             
+        </div>
+        <div class="float-right col-md-12">
+          <a class="details" [routerLink]="['/sentiment', stock.stockInfo.symbol]"  id="sentiment{{stock.stockInfo.symbol}}">See sentiment details</a>
+        </div>
+       
+      </div>
+    </div>
+  </div>
