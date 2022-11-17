@@ -20,6 +20,7 @@ export class LocalStorageService {
     this._stockInfo$.next(data);
   }
   getStockInfo(){ 
+    this.setInitData();
     return this._stockInfo$.asObservable();
   }
 

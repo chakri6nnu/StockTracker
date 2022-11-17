@@ -34,7 +34,7 @@ export class SentimentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params:ParamMap) => { 
-        this.getInsiderSentiment(params.get('symbol'));
+      this.getInsiderSentiment(params.get('symbol'));
     });
   }
   getFirstDayOfMonth(year:number, month:number) {
@@ -62,11 +62,11 @@ export class SentimentComponent implements OnInit {
       this.router.navigate(['']);
       return;
     }
-    this.loader.show();
     const isExist = this.stocksList.filter((res:StocksList) => {
       return res.stockInfo.symbol === symbol;
     });
-
+    this.loader.show();
+    console.log(symbol,isExist,this.stocksList)
     const date = new Date();
     date.setMonth(date.getMonth() - 1);
     const toDate = this.getFirstDayOfMonth(
@@ -83,10 +83,10 @@ export class SentimentComponent implements OnInit {
     this.finnhubService.getInsiderSentiment(""+symbol,this.dateFormat(fromDate),this.dateFormat(toDate))
     .pipe(
       takeUntil(this.ngUnsubscribe)
-    ).subscribe((result:InsiderSentiment) => {    
-      this.stockInfo = result;
-      this.stockInfo.description = isExist[0].stockInfo.description;
-      this.loader.hide();
+    ).subscribe((result:InsiderSentiment) => {
+        this.loader.hide();   
+        this.stockInfo = result;
+        this.stockInfo.description = isExist[0].stockInfo.description;        
     })
   }
 

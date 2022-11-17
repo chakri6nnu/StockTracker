@@ -76,11 +76,13 @@ export class HomeComponent implements OnInit {
 
   removeSymbol(_symbol:string){
     if(_symbol != ''){
+      console.log('removed item: ',_symbol)
       var index = this.stocksList.findIndex((item:StocksList) => {
         return item.stockInfo.symbol === _symbol;
       });
       this.stocksList.splice(index,1); // Remove item by index
       this.localStorageService.setStockInfo(this.stocksList);
+      this.appService.setRemoveSymbol('');
     }
   }
 
